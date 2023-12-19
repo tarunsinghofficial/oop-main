@@ -1,0 +1,44 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+class ClassMasters {
+public:
+
+ClassMasters() {
+cout << "No-argument constructor called." << endl;
+}
+
+
+ClassMasters(int x) {
+cout << "One-argument constructor called with " << x << endl;
+}
+
+
+ClassMasters(int x, int y) {
+cout << "Two-argument constructor called with " << x << " and " << y << endl;
+}
+
+
+ClassMasters(const ClassMasters &obj) {
+cout << "Copy constructor called." << endl;
+}
+
+ClassMasters(int *arr, int size) {
+cout << "Dynamic constructor called." << endl;
+}
+};
+
+
+int main() {
+    
+    ClassMasters obj1;
+    ClassMasters obj2(10);
+    ClassMasters obj3(10, 20);
+    ClassMasters obj4 = obj2;
+    
+    int arr[] = {1,2,3};
+    ClassMasters obj5(arr, 3);
+    
+    return 0;
+}

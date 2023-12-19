@@ -1,0 +1,20 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int power(int m, int n) {
+return pow(m, n);
+}
+double power(double m, int n) {
+return pow(m, n);
+}
+int main() {
+int m1, n1;
+double m2, n2;
+cout << "Enter value and power in Integer: ";
+cin >> m1 >> n1;
+cout << "Enter value and power in double: ";
+cin >> m2 >> n2;
+cout << "Integer Power: " << power(m1, n1) << endl;
+cout << "Double Power: " << power(m2, n2) << endl;
+return 0;
+}

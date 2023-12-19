@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+float calculateSimpleInterest(float principal, float time, float rate = 0.05) {
+    return (principal * rate * time) / 100;
+}
+
+int main() {
+    float principal, time, rate;
+    
+    cout << "Enter principal amount: ";
+    cin >> principal;
+    
+    cout << "Enter time (in years): ";
+    cin >> time;
+    
+    cout << "Enter rate of interest (default is 0.05): ";
+    cin >> rate;
+
+    float interest = calculateSimpleInterest(principal, time, rate);
+    cout << "Simple Interest: " << interest << endl;
+
+    return 0;
+}

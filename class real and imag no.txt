@@ -1,0 +1,51 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+class Complex {
+    private: 
+        double real;
+        double img;
+    
+    public:
+        void display() {
+            cout << "Complex number " << real << " + " << img << "i" << endl;
+        }
+        
+        void assign(double r, double i) {
+            real = r;
+            img = i;
+        }
+        
+        void addReal(double num) {
+            real = real + num;
+        }
+        
+        void subReal(double num) {
+            real = real - num;
+        }
+        
+        void addImg(double num) {
+            img = img + num;
+        }
+        
+        void subImg(double num) {
+            img = img - num;
+        }
+};
+
+int main() {
+    
+    Complex c1;
+    
+    c1.assign(5.0, 8.0);
+    cout << "Before Complex Number:" << endl;
+    c1.display();
+    
+    c1.addReal(3.5);
+    c1.subImg(1.8);
+    cout << "After Operations:" << endl;
+    c1.display();
+    
+    return 0;
+}

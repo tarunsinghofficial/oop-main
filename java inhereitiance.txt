@@ -1,0 +1,28 @@
+class Number1 {
+    void display1() {
+        System.out.println("Number 1");
+    }
+}
+
+class Number2 extends Number1 {
+    void display2() {
+        System.out.println("Number 2");
+    }
+}
+
+class Number3 extends Number2 {
+    void display3() {
+        System.out.println("Number 3");
+    }
+}
+
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        Number3 obj = new Number3();
+        
+        obj.display1();
+        obj.display2();
+        obj.display3();
+    }
+}

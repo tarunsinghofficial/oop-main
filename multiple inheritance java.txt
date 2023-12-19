@@ -1,0 +1,27 @@
+interface Animal {
+    void eat();
+}
+
+interface Animal2 {
+    void run();
+}
+
+class Cat implements Animal, Animal2 {
+    @Override
+    public void eat() {
+        System.out.println("cat is eating...");
+    }
+
+    @Override
+    public void run() {
+        System.out.println("cat is running...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Cat cat = new Cat();
+        cat.eat();
+        cat.run();
+    }
+}

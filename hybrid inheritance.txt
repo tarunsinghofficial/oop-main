@@ -1,0 +1,36 @@
+class A {
+    void methodA() {
+        System.out.println("Method from class A");
+    }
+}
+
+interface B {
+    void methodB();
+}
+
+class C extends A implements B {
+    @Override
+    public void methodB() {
+        System.out.println("Method from interface B");
+    }
+
+    void methodC() {
+        System.out.println("Method from class C");
+    }
+}
+
+class D extends C {
+    void methodD() {
+        System.out.println("Method from class D");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        D objD = new D();
+        objD.methodA();
+        objD.methodB();
+        objD.methodC();
+        objD.methodD();
+    }
+}

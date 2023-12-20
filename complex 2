@@ -1,0 +1,53 @@
+#include <iostream>
+
+class Complex {
+
+private:
+
+double real, imag;
+
+public:
+
+Complex(double r = 0.0, double i = 0.0) : real(r), imag(i) {}
+
+Complex operator+(const Complex& other) const {
+
+return Complex(real + other.real, imag + other.imag);
+
+}
+
+friend Complex operator*(const Complex& a, const Complex& b) {
+
+return Complex(a.real * b.real - a.imag * b.imag,
+
+a.real * b.imag + a.imag * b.real);
+
+}
+
+void print() const {
+
+std::cout << "(" << real << ", " << imag << "i)" << std::endl;
+
+}
+
+};
+
+int main() {
+
+Complex c1(3.0, 4.0), c2(5.0, 6.0);
+
+Complex c3 = c1 + c2;
+
+std::cout << "Sum of c1 + c2 = ";
+
+c3.print();
+
+Complex c4 = c1 * c2;
+
+std::cout << "Product of c1 * c2 = ";
+
+c4.print();
+
+return 0;
+
+}
